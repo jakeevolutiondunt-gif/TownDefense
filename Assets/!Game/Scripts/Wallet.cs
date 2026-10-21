@@ -1,49 +1,63 @@
 public class Wallet
 {
     private int _wheat;
-    private int _gold;
     private int _workerCount;
+    private int _knightCount;
+    private int _archerCount;
+    private int _spearmanCount;
+    private int _mageCount;
 
-    private int WorkerCount => _workerCount;
     public int Wheat => _wheat;
-    public int Gold => _gold;
-    #region Gold
-    public void AddGold(int gold)
-    {
-        _gold += gold;
-    }
-    public bool GetGold(int gold)
-    {
-        if (gold >= _gold)
-        {
-            _gold -= gold;
-            return true;
-        }
-        return false;
-    }
-    public bool AmountGold(int gold) => _gold >= gold;
-    public Wallet(int wheat, int gold)
+    public int WorkerCount => _workerCount;
+    public int KnightCount => _knightCount;
+    public int ArcherCount => _archerCount;
+    public int SpearmanCount => _spearmanCount;
+    public int MageCount => _mageCount;
+
+    public Wallet(int wheat, int workers, int knights, int archers, int spearmans, int mages)
     {
         _wheat = wheat;
-        _gold = gold;
+        _workerCount = workers;
+        _knightCount = knights;
+        _archerCount = archers;
+        _spearmanCount = spearmans;
+        _mageCount = mages;
     }
-    #endregion Gold
-    #region Wheat
+
+#region Wheat
     public void AddWheat(int wheat)
     {
         _wheat += wheat;
     }
-
-    public bool GetWheat(int wheat)
+    #endregion
+#region Worker
+    public void AddWorker(int worker)
     {
-        if (_wheat >= wheat)
-        {
-            _wheat -= wheat;
-            return true;
-        }
-        return false;
+        _workerCount += worker;
     }
-
-    public bool AmountWheat(int wheat) => _wheat >= wheat;
-    #endregion Wheat
+    #endregion
+#region Knight
+    public void AddKnight(int knight)
+    {
+        _knightCount += knight;
+    }
+    #endregion
+#region Archer
+    public void AddArcher(int archer)
+    {
+        _archerCount += archer;
+    }
+    #endregion
+#region Spearman
+    public void AddSpearman(int spearman)
+    {
+        _spearmanCount += spearman;
+    }
+    #endregion
+#region Mage
+    public void AddMage(int mage)
+    {
+        _mageCount += mage;
+    }
+    #endregion
 }

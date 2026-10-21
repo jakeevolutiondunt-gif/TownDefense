@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI
   _wheatText: {fileID: 1076127344}
   _goldText: {fileID: 569438447}
+  _btnHireWorker: {fileID: 0}
 --- !u!1 &312490578
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0448\u0435\u043D\u0438\u0446\u0430: 0"
+  m_text: "\u0417\u043E\u043B\u043E\u0442\u043E: 0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2117,9 +2118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _ui: {fileID: 241401510}
-  _rFabric: {fileID: 0}
+  _rFabric: {fileID: 1632699158}
   _startWheat: 100
   _startGold: 50
+  _workerCost: 10
 --- !u!4 &1632699157
 Transform:
   m_ObjectHideFlags: 0
@@ -2151,6 +2153,7 @@ MonoBehaviour:
   _timeForIncome: 2
   _baseWheatIncome: 5
   _baseGoldIncome: 0
+  _wheatIncomePerWorker: 5
 --- !u!1 &1874147184
 GameObject:
   m_ObjectHideFlags: 0
