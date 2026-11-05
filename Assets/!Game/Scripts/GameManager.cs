@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
     [Header("Ballance")]
     [SerializeField] private int _startWheat;
     [SerializeField] private float _hireTime = 3f;
-    [SerializeField] private int _workerCost = 10;
-    [SerializeField] private int _knightCost = 40;
-    [SerializeField] private int _archerCost = 60;
-    [SerializeField] private int _spearmanCost = 120;
-    [SerializeField] private int _mageCost = 300;
+    [SerializeField] protected int _workerCost = 10;
+    [SerializeField] protected int _knightCost = 40;
+    [SerializeField] protected int _archerCost = 60;
+    [SerializeField] protected int _spearmanCost = 120;
+    [SerializeField] protected int _mageCost = 300;
 
     private Wallet _wallet;
     private Queue<UnitType> _hireQueue = new();
@@ -56,15 +56,31 @@ public class GameManager : MonoBehaviour
             {
                 UnitType unit = _hireQueue.Dequeue();
                 if (unit == UnitType.Worker)
+                {
                     _wallet.AddWorker(1);
+                    _wallet.ReduceWheat(WorkerCost);
+                }
                 else if (unit == UnitType.Knight)
+                {
                     _wallet.AddKnight(1);
+                    _wallet.ReduceWheat(KnightCost);
+                }
                 else if (unit == UnitType.Archer)
+                {
                     _wallet.AddArcher(1);
+                    _wallet.ReduceWheat(ArcherCost);
+                }
                 else if (unit == UnitType.Spearman)
+                {
                     _wallet.AddSpearman(1);
+                    _wallet.ReduceWheat(SpearmanCost);
+                }
                 else if (unit == UnitType.Mage)
+                {
                     _wallet.AddMage(1);
+                    _wallet.ReduceWheat(MageCost);
+                }
+                _hireTimer = 0;
             }
         }
     }
@@ -81,4 +97,71 @@ public class GameManager : MonoBehaviour
         Spearman,
         Mage
     }
+}
+public class Wallet: GameManager
+{
+    private int _wheat;
+    private int _workerCount;
+    private int _knightCount;
+    private int _archerCount;
+    private int _spearmanCount;
+    private int _mageCount;
+
+    public int Wheat => _wheat;
+    public int WorkerCount => _workerCount;
+    public int KnightCount => _knightCount;
+    public int ArcherCount => _archerCount;
+    public int SpearmanCount => _spearmanCount;
+    public int MageCount => _mageCount;
+
+    public Wallet(int wheat, int workers, int knights, int archers, int spearmans, int mages)
+    {
+        _wheat = wheat;
+        _workerCount = workers;
+        _knightCount = knights;
+        _archerCount = archers;
+        _spearmanCount = spearmans;
+        _mageCount = mages;
+    }
+
+    #region Wheat
+    public void AddWheat(int wheat)
+    {
+        _wheat += wheat;
+    }
+    public void ReduceWheat(int wheat)
+    {
+        _wheat -= wheat;
+    }
+    #endregion
+    #region Worker
+    public void AddWorker(int worker)
+    {
+        _workerCount += worker;
+    }
+    #endregion
+    #region Knight
+    public void AddKnight(int knight)
+    {
+        _knightCount += knight;
+    }
+    #endregion
+    #region Archer
+    public void AddArcher(int archer)
+    {
+        _archerCount += archer;
+    }
+    #endregion
+    #region Spearman
+    public void AddSpearman(int spearman)
+    {
+        _spearmanCount += spearman;
+    }
+    #endregion
+    #region Mage
+    public void AddMage(int mage)
+    {
+        _mageCount += mage;
+    }
+    #endregion
 }

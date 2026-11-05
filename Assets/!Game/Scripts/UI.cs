@@ -124,7 +124,7 @@ public class UI : MonoBehaviour
 
     public void HireWorker() => _gameManager.Hire(UnitType.Worker);
     public void HireKnight() => _gameManager.Hire(UnitType.Knight);
-    public void HireArcher() => _gameManager.Hire(UnitType.Knight);
-    public void HireSpearman() => _gameManager.Hire(UnitType.Knight);
-    public void HireMage() => _gameManager.Hire(UnitType.Knight);
+    public void HireArcher() => _gameManager.Hire(UnitType.Archer);
+    public void HireSpearman() => _gameManager.Hire(UnitType.Spearman);
+    public void HireMage() => _gameManager.Hire(UnitType.Mage);
 }
