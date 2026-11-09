@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f5a1e8794d4b53f45b93da4a1ef69ccd
+guid: 61dd581124594294fb87bc8f156ae4d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7877840947907775127
-    second: Barricade_0
+      213: -6967320463958174578
+    second: KnightBody_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barricade_0
+      name: KnightBody_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 77
         y: 0
-        width: 447
-        height: 447
+        width: 99
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79ac1118a96b35d60800000000000000
-      internalID: 7877840947907775127
+      spriteID: e849675d3fa1f4f90800000000000000
+      internalID: -6967320463958174578
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Barricade_0: 7877840947907775127
+      KnightBody_0: -6967320463958174578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

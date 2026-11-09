@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d17b2f9f36768bd4cadf8df9e85296e9
+guid: 9ff7e5bd4ffd0614e99a5107e987a5f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7856493677412862020
-    second: Bow_0
+      213: 6362832775884612094
+    second: orc_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bow_0
+      name: orc_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 580
-        height: 386
+        x: 19
+        y: 13
+        width: 222
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb734b930a028f290800000000000000
-      internalID: -7856493677412862020
+      spriteID: ef1a0dba2b25d4850800000000000000
+      internalID: 6362832775884612094
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bow_0: -7856493677412862020
+      orc_0: 6362832775884612094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
